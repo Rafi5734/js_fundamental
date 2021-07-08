@@ -69,3 +69,16 @@ const findingIndex = personalData.findIndex((person, id, allPerson) => {
     return person.name === "hasan";
 });
 //console.log(findingIndex);
+//console.log(myTestArray.includes(4)); it return truthy or falsy value of an array..
+
+const assignmentMarks = [3, 4, 5, 3, 45, 5432, 23, 53];
+const waiver = 0.1;
+const finalMarks = assignmentMarks.map((marks, index, allMarks) => {
+    const marksObject = {
+        index: index,
+        marks: marks,
+        totalMarks: marks * waiver,
+    };
+    return marksObject;
+});
+console.log(finalMarks, assignmentMarks);
